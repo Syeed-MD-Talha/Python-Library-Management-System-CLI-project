@@ -62,7 +62,7 @@ def lent_book_details(Books):
     clear_console()
     print(f"\n{" "*30}{cl['c_51']}=================⭕ {cl['bold']}{cl['c_51']}List of the Books and Book Borrowers{cl['reset']} ⭕{cl['c_51']} ================\n{cl['reset']}")
     for book in Books:
-        if book['is_lent']:
+        if len(book['book_Borrowers'][0]):
             print(f"{" "*30}📌 {cl['c_192']}{cl['bold']}{cl['Italic']}`{book['title']}`{cl['reset']} {cl['c_84']}was lent by: {cl['reset']}", end='')
             print(f"{cl['c_210']}{', '.join(book['book_Borrowers'])}{cl['reset']} ")
             time.sleep(0.4)
