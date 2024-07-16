@@ -57,16 +57,18 @@ def return_book(Books):
     else:
         print(f"{" "*32}{cl['c_10']}{cl['bold']}Successfully Done ✅ {cl['reset']}")
         update_info(Books)
-
+        
 def lent_book_details(Books):
     clear_console()
-    print(f"\n{" "*30}{cl['c_51']}=================⭕ {cl['bold']}{cl['c_51']}List of the Books and Book Borrowers{cl['reset']} ⭕{cl['c_51']} ================\n{cl['reset']}")
+    print(f"\n{' '*30}{cl['c_51']}=================⭕ {cl['bold']}{cl['c_51']}List of the Books and Book Borrowers{cl['reset']} ⭕{cl['c_51']} ================\n{cl['reset']}")
     for book in Books:
-        if len(book['book_Borrowers'][0]):
-            print(f"{" "*30}📌 {cl['c_192']}{cl['bold']}{cl['Italic']}`{book['title']}`{cl['reset']} {cl['c_84']}was lent by: {cl['reset']}", end='')
-            print(f"{cl['c_210']}{', '.join(book['book_Borrowers'])}{cl['reset']} ")
-            time.sleep(0.4)
-    print(f"{cl['c_51']}\n{" "*30}============================⭕ ⭕ ⭕ ⭕ ⭕===================================\n{cl['reset']}")
+        if book['is_lent'] and book['book_Borrowers']:
+            borrowers = [b for b in book['book_Borrowers'] if b and b.lower() != 'none']
+            if borrowers:
+                print(f"{' '*30}📌 {cl['c_192']}{cl['bold']}{cl['Italic']}`{book['title']}`{cl['reset']} {cl['c_84']}was lent by: {cl['reset']}", end='')
+                print(f"{cl['c_210']}{', '.join(borrowers)}{cl['reset']} ")
+                time.sleep(0.4)
+    print(f"{cl['c_51']}\n{' '*30}============================⭕ ⭕ ⭕ ⭕ ⭕===================================\n{cl['reset']}")
 
 # Main function to tie everything together
 def book_lending_system(Books):
