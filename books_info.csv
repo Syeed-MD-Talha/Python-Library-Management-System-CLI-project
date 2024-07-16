@@ -1,0 +1,10 @@
+title,authors,isbn,year,price,quantity,is_lent,book_Borrowers
+Lord of the Rings: The Return of the King,"Labib,Tolkien",232343434,02-05-2005,50,3,True,"Sayed,Rozob,Talha"
+Harry Potter,"Rowling,Harry,Potter",232343434,02-05-1999,500,97,True,"Babul,Abbas,Siam,harry potter,taha,harry potter"
+The Hobbit,"Tolkien,Harry",123456789,21-09-1937,30,150,True,"Umair,Sayem"
+Pride and Prejudice,"Jane,Austen,Harry",987654321,28-01-1813,25,80,True,"Polash,Ahsan"
+The famine of 1984,"George,Orwell,Talha",111222333,06-06-1949,35,119,True,"Adil,talha"
+The cow,"rozob,sayed",11-23-34-23,02/12/1999,22,0,True,"none,talha,rabiul,sunny,talha"
+Mr. Robot,tuaha,2303-33,15/07/2024,12,13,False,
+A fish,"galib,anas",11-22-33-44,10/10/2024,30,30,True,
+A crazy frog,"jawad,tawab",44-90-234,02/12/2024,245.3,50,False,
